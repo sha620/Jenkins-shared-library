@@ -7,7 +7,7 @@ def call(String credid, String imagename ){
                )]){
                    sh "docker login -u ${env.user} -p ${env.pass}"
                    sh "docker image tag ${imagename} ${env.user}/${imagename}"
-                   sh "docker push ${env.user}/${imagename}:la"
+                   sh "docker push ${env.user}/${imagename}"
                }
             }
 }
